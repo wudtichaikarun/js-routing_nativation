@@ -36,6 +36,16 @@
           const path = link.getAttribute('data-href')
           console.log(path)
 
+          /* 
+          pushState arguments -> (data, title, url)
+          -> Sent
+          data = 'romantic'
+          
+          -> How to get
+          get data use window.onpopstate = (event) => {
+            event.state // 'romantic'
+          }
+          */
           history.pushState(null, '', path)
           loadContent()
         } )
